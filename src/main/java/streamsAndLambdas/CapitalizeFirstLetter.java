@@ -1,15 +1,15 @@
 package streamsAndLambdas;
 
 import java.util.Arrays;
-import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class CapitalizeFirstLetter {
-    public static void main(String[] args) {
-        String[] strings = {"mazda", "toyota", "honda", "chevy", "dodge"};
 
-        Arrays.stream(strings)
+    public static List<String> capitalizeAndSort(String[] strings) {
+        return Arrays.stream(strings)
                 .map(s -> Character.toUpperCase(s.charAt(0)) + s.substring(1))
                 .sorted()
-                .forEach(System.out::println);
+                .collect(Collectors.toList());
     }
 }
