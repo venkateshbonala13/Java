@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class ReadsFile {
     public static void main(String[] args) {
         try {
-            File myfile = new File(("C:\\Users\\venka\\OneDrive\\Desktop\\TestFile.txt"));
+            File myfile = new File(("C:\\Users\\venka\\IdeaProjects\\Maven_sample\\src\\main\\resources\\file.txt"));
 
             Scanner sc = new Scanner(myfile);
             while (sc.hasNext()) {
